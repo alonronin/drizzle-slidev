@@ -55,6 +55,36 @@ const db = drizzle(client);
 
 ---
 
+# Schema
+
+```ts
+import { serial, text, pgTable, pgSchema } from "drizzle-orm/pg-core";
+
+export const mySchema = pgSchema("my_schema");
+
+export const colors = mySchema.enum('colors', ['red', 'green', 'blue']);
+
+export const mySchemaUsers = mySchema.table('users', {
+  id: serial('id').primaryKey(),
+  name: text('name'),
+  color: colors('color').default('red'),
+});
+```
+
+### Equivalent SQL
+
+```sql
+CREATE SCHEMA "my_schema";
+CREATE TYPE "my_schema"."colors" AS ENUM ('red', 'green', 'blue');
+CREATE TABLE "my_schema"."users" (
+  "id" serial PRIMARY KEY,
+  "name" text,
+  "color" "my_schema"."colors" DEFAULT 'red'
+);
+```
+
+---
+
 # Basic Queries - Part 1
 
 ### Define a table:
@@ -228,6 +258,7 @@ const usersWithCategories = await db
     );
     ```
 4. **Relational Queries**: Complex relational queries support
+5. **Extensions**: drizzle-zod, drizzle-valibot, prisma, ESLint
 
 </v-clicks>
 
