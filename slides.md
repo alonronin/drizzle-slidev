@@ -14,7 +14,7 @@ title: "Drizzle ORM: A Modern TypeScript ORM"
 
 <Logo />
 
-# Drizzle ORM
+# Drizzle <span class="color-green">ORM</span>
 
 A Modern TypeScript ORM
 
@@ -22,7 +22,7 @@ A Modern TypeScript ORM
 layout: center
 ---
 
-# Installation
+# <span class="color-green">Installation</span>
 
 ### Install Drizzle ORM with PostgreSQL:
 
@@ -33,7 +33,7 @@ npm i -D @types/pg drizzle-kit
 
 ---
 
-# Configuration
+# <span class="color-green">Configuration</span>
 
 ### Basic setup for Drizzle ORM with PostgreSQL:
 
@@ -55,7 +55,7 @@ const db = drizzle(client);
 
 ---
 
-# Basic Queries - Part 1
+# <span class="color-green">Basic Queries</span> - Part 1
 
 ### Define a Model:
 
@@ -83,7 +83,7 @@ const allUsers = await db.select().from(users).all();
 
 ---
 
-# Basic Queries - Part 2
+# <span class="color-green">Basic Queries</span> - Part 2
 
 ### Insert:
 
@@ -115,7 +115,7 @@ const deletedUser = await db.delete(users).where(eq(users.id, 1)).returning();
 
 ---
 
-# Basic Relationships (One-to-Many)
+# <span class="color-green">Basic Relationships</span> (One-to-Many)
 
 ### Define related Models:
 
@@ -142,7 +142,7 @@ export const posts = pgTable("posts", {
 
 ---
 
-# Query related data:
+# <span class="color-green">Query</span> related data:
 
 ```ts {8|all}
 const usersWithPosts = await db
@@ -158,7 +158,7 @@ const usersWithPosts = await db
 
 ---
 
-# Many-to-Many Relationships
+# <span class="color-green">Many-to-Many</span> Relationships
 
 ### Define Models for a many-to-many relationship:
 
@@ -195,7 +195,7 @@ export const usersToCategories = pgTable(
 
 ---
 
-# Query many-to-many relationship:
+# <span class="color-green">Query</span> many-to-many relationship:
 
 ```ts {8|9|all}
 const usersWithCategories = await db
@@ -213,7 +213,7 @@ const usersWithCategories = await db
 
 ---
 
-# Unique Features
+# <span class="color-green">Unique</span> Features
 
 <v-clicks>
 
@@ -238,7 +238,7 @@ const usersWithCategories = await db
 
 ---
 
-# Migrations
+# <span class="color-green">Migrations</span>
 
 ### Generate Migrations:
 
@@ -268,7 +268,7 @@ CREATE INDEX name_idx ON users (`full_name`);
 
 ---
 
-# Apply Migrations:
+# <span class="color-green">Apply</span> Migrations:
 
 ```ts {2|10|all}
 import { drizzle } from 'drizzle-orm/node-postgres';
@@ -285,7 +285,7 @@ await migrate(db, { migrationsFolder: './drizzle' });
 
 ---
 
-# Conclusion
+# <span class="color-green">Conclusion</span>
 
 <v-clicks>
 
@@ -299,6 +299,6 @@ await migrate(db, { migrationsFolder: './drizzle' });
 
 ---
 
-# Thank You!
+# <span class="color-green">Thank</span> You!
 
 Any questions?
