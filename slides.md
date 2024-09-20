@@ -284,6 +284,8 @@ await migrate(db, { migrationsFolder: './drizzle' });
 ```
 
 ---
+layout: center
+---
 
 # <span class="color-green">Conclusion</span>
 
@@ -297,6 +299,8 @@ await migrate(db, { migrationsFolder: './drizzle' });
 
 </v-clicks>
 
+---
+layout: center
 ---
 
 # <span class="color-green">Thank</span> You!
